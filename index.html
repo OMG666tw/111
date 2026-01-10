@@ -46,10 +46,16 @@
             background: #eef2ff; /* 淡淡的藍色背景，呼應你的主題 */
             padding: 5px 10px;
         }
+        h1 {
+            display: flex;         /* 開啟彈性佈局 */
+            align-items: center;   /* 讓圖片與文字垂直居中對齊 */
+            color: #5E5EC4;
+        }
+
         h1 img {
-            vertical-align: middle; /* 讓圖片跟文字的中間對齊 */
-            margin-right: 10px;    /* 圖片右邊留 10px 距離，不要貼著文字 */
-            border-radius: 4px;    /* 讓小圖示有一點圓角更精緻 */
+            margin-right: 15px;    /* 讓圖片跟文字之間有一點空隙 */
+            height: 40px;          /* 調整圖片高度 */
+            display: inline;       /* 確保它是行內元素 */
         }
     </style>
 </head>

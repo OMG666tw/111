@@ -19,6 +19,33 @@
             display: block;  /* 讓圖片自己佔一行，不會跟文字擠在一起 */
             margin: 10px 0;  /* 上下留一點間距 */
         }
+        .content {
+            max-width: 600px;    /* 限制最大寬度，電腦看才不會太寬 */
+            margin: 0 auto;      /* 讓整個區塊水平居中 */
+            padding: 20px;       /* 內距，讓文字跟邊界保持距離 */
+            background-color: #f9f9f9; /* 淡淡的灰色背景，增加層次感 */
+            border-radius: 15px; /* 圓角效果，看起來比較親切 */
+            line-height: 1.8;    /* 增加行高，文字比較不擁擠 */
+        }
+
+        /* 針對內容裡的圖片優化 */
+        .content img {
+            width: 100%;         /* 圖片寬度自動填滿容器 */
+            height: auto;        /* 保持比例 */
+            border: 1px solid #ddd; /* 給圖片一個細細的邊框 */
+            border-radius: 8px;  /* 圖片也加一點圓角 */
+            margin: 15px 0;      /* 圖片上下留一點空格 */
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* 輕微的陰影，讓圖片有立體感 */
+        }
+
+        /* 針對布林值的小字說明 */
+        small {
+            color: #666;         /* 顏色深灰色 */
+            display: block;      /* 讓它獨立一行 */
+            margin-top: 5px;
+            background: #eef2ff; /* 淡淡的藍色背景，呼應你的主題 */
+            padding: 5px 10px;
+        }
     </style>
 </head>
 <body>
@@ -28,6 +55,7 @@
     <p>以下是影片連結:</p>
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">點擊觀看影片</a>
     <hr> -->
+    <div class="content">
     <p>首先,開啟Scratch
         <br>然後,點擊建立新專案
         <br>接著,按函式積木
@@ -38,8 +66,9 @@
         <hr class="box">
         <br>輸入函式名稱
         <img src="3.png" alt="輸入函式名稱" >
-        <br>*布林值是指只有真(true)或假(false)兩種值的資料型態
+        <br><small>*布林值是指只有真(true)或假(false)兩種值的資料型態</small>
         <br>按確定
     </p>
+    </div>
 </body>
 </html>

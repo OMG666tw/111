@@ -1,108 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>影片作業</title>
     <meta name="author" content="柏廷">
-    <link rel="icon" href="Gemini_Generated_Image_2fw0il2fw0il2fw0.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
     <style>
-        h1{
-            color: rgb(94, 94, 196);
+        body {
+            font-family: "Microsoft JhengHei", sans-serif; /* 加個字體更好看 */
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-
-        img {
-            max-width: 100%; /* 確保圖片寬度不會超過螢幕 */
-            height: auto;    /* 保持圖片比例 */
-            display: block;  /* 讓圖片自己佔一行，不會跟文字擠在一起 */
-            margin: 10px 0;  /* 上下留一點間距 */
-        }
+        
         .content {
-            max-width: 600px;    /* 限制最大寬度，電腦看才不會太寬 */
-            margin: 0 auto;      /* 讓整個區塊水平居中 */
-            padding: 20px;       /* 內距，讓文字跟邊界保持距離 */
-            background-color: #f9f9f9; /* 淡淡的灰色背景，增加層次感 */
-            border-radius: 15px; /* 圓角效果，看起來比較親切 */
-            line-height: 1.8;    /* 增加行高，文字比較不擁擠 */
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* 改成純白背景看起來比較乾淨 */
+            border-radius: 15px;
+            line-height: 1.8;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 讓整個卡片浮起來 */
         }
 
-        /* 針對內容裡的圖片優化 */
-        .content img {
-            width: 100%;         /* 圖片寬度自動填滿容器 */
-            height: auto;        /* 保持比例 */
-            border: 1px solid #ddd; /* 給圖片一個細細的邊框 */
-            border-radius: 8px;  /* 圖片也加一點圓角 */
-            margin: 15px 0;      /* 圖片上下留一點空格 */
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* 輕微的陰影，讓圖片有立體感 */
-        }
-
-        /* 針對布林值的小字說明 */
-        small {
-            color: #666;         /* 顏色深灰色 */
-            display: block;      /* 讓它獨立一行 */
-            margin-top: 5px;
-            background: #eef2ff; /* 淡淡的藍色背景，呼應你的主題 */
-            padding: 5px 10px;
-        }
         h1 {
-            display: flex;         /* 開啟彈性佈局 */
-            align-items: center;   /* 讓圖片與文字垂直居中對齊 */
             color: #5E5EC4;
+            display: flex;
+            align-items: center;
+            font-size: 1.5em; /* 手機上字體大小適中 */
         }
 
+        /* 這裡是你原本設定的標題圖片樣式 */
         h1 img {
-            margin-right: 15px;    /* 讓圖片跟文字之間有一點空隙 */
-            height: 40px;          /* 調整圖片高度 */
-            display: inline;       /* 確保它是行內元素 */
+            margin-right: 15px;
+            height: 40px;
+            display: inline-block;
         }
+
+        /* 讓教學截圖美觀化 */
+        .tutorial-img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        /* 小說明區塊 */
+        small {
+            color: #555;
+            display: block;
+            margin-top: 5px;
+            background: #eef2ff;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #5E5EC4; /* 左邊加一條線增加設計感 */
+        }
+
+        /* 程式碼區塊樣式 */
+        pre {
+            background-color: #2d2d2d; /* 深色背景 */
+            color: #f8f8f2;            /* 淺色文字 */
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;          /* 如果程式碼太長可以左右滑動 */
+        }
+
         #box {
-            border: 2px solid #5E5EC4; /* 使用主題色作為邊框顏色 */
-            border-radius: 10px;       /* 圓角效果 */
+            border: none;              /* 先歸零預設邊框 */
+            height: 2px;               /* 設定線條高度 */
+            background-color: #5E5EC4; /* 設定顏色 */
+            border-radius: 10px;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
     <div class="content">
-    <h1>812第九組5號林柏廷的作業</h1>
-    <p>老師好!!我是第九組的林柏廷</p>
-    <p>這是我的影片作業，請老師過目!!</p>
-    <p>以下是影片連結:</p>
-    <a href="https://www.youtube.com/watch?v=Fo3kFfo6dlw" target="_blank">點擊觀看影片</a> 
-    <hr id="box">
-    <small>css技術支援:橘子蘋果程式學苑</small>
-    <hr>
-    <!--以下是圖片教學 -->
-    <p>為什麼要建立函式?
-        <small>函式（Function）是程式設計中的基本單位。它是一段具名的程式碼，用來完成特定的任務或運算。透過函式，程式可以被模組化，提升可讀性與重複使用性。</small>
-        <br>建立函式的好處:
-        <small>1. 重複使用: 函式可以被多次呼叫，避免重複撰寫相同的程式碼。
-            <br>2. 模組化: 將程式碼分解成小的函式，有助於組織與管理程式。
-            <br>3. 易於維護: 修改函式內的程式碼不會影響其他部分，只需更新函式本身。
-            <br>4. 提升可讀性: 函式名稱可以描述其功能，使程式碼更易理解。</small>
-            <br>總結來說，函式是程式設計中不可或缺的工具，有助於提升程式的效率與品質。
-            <br>以下我用JavaScript語言來示範建立函式:</p>
-            <pre><code>
+        <h1>
+            <img src="https://th.bing.com/th/id/ODF.ativy2LFXZHxQhWjakf8gw?w=32&h=32&qlt=98&pcl=fffffa&o=6&pid=1.2" alt="Logo">
+            812 第九組 5 號林柏廷的作業
+        </h1>
+        
+        <p>老師好!! 我是第九組的林柏廷。</p>
+        <p>這是我的影片作業，請老師過目!!</p>
+        
+        <p>
+            以下是影片連結: <br>
+            <a href="https://www.youtube.com/watch?v=Fo3kFfo6dlw" target="_blank" style="color: #5E5EC4; font-weight: bold;">
+                ▶ 點擊觀看影片
+            </a> 
+        </p>
 
-                function greet(name) {
-                return "Hello, " + name + "!";
-                }
-                console.log(greet("Alice")); // 輸出: Hello, Alice!
-            </code></pre>
-            <p>以下是建立函式的步驟:
-        <br>接著我們用Scratch建立函式積木,按函式積木
-        <img src="1.png" alt="函式積木" >
+        <hr id="box">
+        <small style="border: none; background: none; padding: 0; color: #888;">css技術支援: 橘子蘋果程式學苑</small>
         <hr>
-        <br>按建立函式積木
-        <img src="2.png" alt="建立函式積木" >
+
+        <h3>為什麼要建立函式?</h3>
+        <small>
+            <strong>函式（Function）</strong>是程式設計中的基本單位。它是一段具名的程式碼，用來完成特定的任務或運算。透過函式，程式可以被模組化，提升可讀性與重複使用性。
+        </small>
+        
+        <p><strong>建立函式的好處:</strong></p>
+        <small>
+            1. <strong>重複使用:</strong> 函式可以被多次呼叫，避免重複撰寫相同的程式碼。<br>
+            2. <strong>模組化:</strong> 將程式碼分解成小的函式，有助於組織與管理程式。<br>
+            3. <strong>易於維護:</strong> 修改函式內的程式碼不會影響其他部分。<br>
+            4. <strong>提升可讀性:</strong> 函式名稱可以描述其功能。
+        </small>
+        
+        <p>總結來說，函式是程式設計中不可或缺的工具。</p>
+        
+        <p>以下我用 JavaScript 語言來示範建立函式:</p>
+        <pre><code>function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+console.log(greet("Alice")); 
+// 輸出: Hello, Alice!</code></pre>
+
+        <p>以下是建立函式的步驟:</p>
+        
+        <p>1. 接著我們用 Scratch 建立函式積木，按<strong>函式積木</strong></p>
+        <img src="1.png" alt="函式積木" class="tutorial-img">
         <hr>
-        <br>輸入函式名稱
-        <img src="3.png" alt="輸入函式名稱" >
-        <br><small>*布林值是指只有真(true)或假(false)兩種值的資料型態</small>
-        <br>按確定
-        <img src="4.png" alt="按確定" >
-    </p>
-    
-    <p>以上是我的作業，謝謝老師的觀看!!</p>
+
+        <p>2. 按<strong>建立函式積木</strong></p>
+        <img src="2.png" alt="建立函式積木" class="tutorial-img">
+        <hr>
+
+        <p>3. 輸入函式名稱</p>
+        <img src="3.png" alt="輸入函式名稱" class="tutorial-img">
+        <small>*布林值是指只有真(true)或假(false)兩種值的資料型態</small>
+        
+        <p>4. 按<strong>確定</strong></p>
+        <img src="4.png" alt="按確定" class="tutorial-img">
+        
+        <hr id="box">
+        <p style="text-align: center; font-weight: bold; color: #5E5EC4;">以上是我的作業，謝謝老師的觀看!!</p>
     </div>
 </body>
 </html>
